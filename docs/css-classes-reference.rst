@@ -116,6 +116,12 @@ Scala ("scala")
 * ``params``:           everything in parentheses inside a class header
 * ``inheritance``:      keywords "extends" and "with" inside class header
 
+Snort ("snort")
+---------------
+
+* ``keyword``:          keyword
+* ``built_in``;         built-in types and variables
+
 Groovy ("groovy")
 -----------------
 
@@ -622,8 +628,8 @@ Fortran ("fortran", "f90", "f95")
 ---------------------------------
 
 * ``comment``:          comment
-* ``function``:         name of a function or a subroutine 
-* ``keyword``:          language keywords (function, if) 
+* ``function``:         name of a function or a subroutine
+* ``keyword``:          language keywords (function, if)
 * ``number``:           number
 * ``string``:           string constant (single or double quote)
 
@@ -632,7 +638,7 @@ IRPF90 ("irpf90")
 
 * ``comment``:          comment
 * ``function``:         name of a function or a subroutine
-* ``keyword``:          language keywords (function, if) 
+* ``keyword``:          language keywords (function, if)
 * ``number``:           number
 * ``string``:           string constant (single or double quote)
 
