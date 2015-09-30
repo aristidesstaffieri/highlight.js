@@ -17,10 +17,10 @@ function(hljs) {
   'rpc ip_proto sameip stream_reassemble stream_size logto session resp react tag activates ' +
   'activated_by replace detection_filter metadata'
 
-  var BUILTINS = '$AIM_SERVERS $DNS_SERVERS $DNS_SERVERS_AD $EXTERNAL_NET $FILE_DATA_PORTS ' +
-  '$GTP_PORTS $HOME_NET $HTTP_PORTS $HTTP_SERVERS $ORACLE_PORTS $SHELLCODE_PORTS ' +
-  '$SIP_PORTS $SIP_SERVERS $SMTP_SERVERS $SNMP_SERVERS $SNORT_BPF $SQL_SERVERS ' +
-  '$SSH_PORTS $SSH_SERVERS $TELNET_SERVERS'
+  // var BUILTINS = '$AIM_SERVERS $DNS_SERVERS $DNS_SERVERS_AD $EXTERNAL_NET $FILE_DATA_PORTS ' +
+  // '$GTP_PORTS $HOME_NET $HTTP_PORTS $HTTP_SERVERS $ORACLE_PORTS $SHELLCODE_PORTS ' +
+  // '$SIP_PORTS $SIP_SERVERS $SMTP_SERVERS $SNMP_SERVERS $SNORT_BPF $SQL_SERVERS ' +
+  // '$SSH_PORTS $SSH_SERVERS $TELNET_SERVERS'
 
   var LITERALS = 'http any'
 
@@ -28,15 +28,12 @@ function(hljs) {
     case_insensitive: false,
     keywords: {
       keyword: KEYWORDS,
-      built_in: BUILTINS,
-      literal: LITERALS
+      literal: LITERALS,
+      operator: '-> <-'
     },
     contains: [
-      {
-        className: 'parens',
-        begin: /\(/, end: /\)/,
-        keywords: KEYWORDS
-      }
+      hljs.QUOTE_STRING_MODE,
+      hljs.REGEXP_MODE
     ]
   }
 }
